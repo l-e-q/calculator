@@ -6,16 +6,18 @@ const subtract = function (x, y) {
     return x - y;
 };
 
-const sum = function (array) {
-    let sum = 0;
-    array.forEach(x => sum += x);
-    return sum;
-};
+const divide = function (x, y) {
+    return x / y;
+}
 
-const multiply = function (array) {
-    let result = 1;
-    array.forEach(x => result *= x);
-    return result;
+// const sum = function (array) {
+//     let sum = 0;
+//     array.forEach(x => sum += x);
+//     return sum;
+// };
+
+const multiply = function (x, y) {
+    return x * y;
 };
 
 const power = function (x, y) {
@@ -29,3 +31,17 @@ const factorial = function (x) {
     }
     return multiply(result);
 };
+
+function operate(operator, x, y) {
+    if (operator = '*') {
+        return multiply(x, y);
+    } else if (operator = '/') {
+        return divide(x, y);
+    } else if (operator = '+') {
+        return add(x, y);
+    } else if (operator = '-') {
+        return subtract(x, y);
+    }
+}
+
+console.log(operate())
