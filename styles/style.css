@@ -1,10 +1,55 @@
 body {
     font-family: 'catamaran';
+    background-color: #61677A;
+    font-weight: 900;
+}
+
+.calculator {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 550px;
+}
+
+#title-text {
+    color: #272829;
+    text-align: center;
+    font-size: 60px;
+    margin-top: 60px;
 }
 
 #display {
-    height: 32px;
-    font-size: 32px;
+    height: 50px;
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #272829;
+}
+
+#buttons-container {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+#KeyC,
+#Backspace {
+    grid-column: span 2;
+    background-color: #FFF6E0;
+}
+
+.number-button,
+.operator-button,
+.operation-button,
+.dot-button {
+    font-size: 20px;
+    font-weight: 900;
+    padding: 20px 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: #D8D9DA;
+    color: #272829;
 }
 
 .footer {
