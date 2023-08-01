@@ -2,15 +2,15 @@ let displayValue = '';
 const display = document.querySelector('#display');
 
 const add = function (x, y) {
-    return Math.round(x + y);
+    return (x + y).toFixed(3).replace(/[.,]000$/, "");
 };
 
 const subtract = function (x, y) {
-    return Math.round(x - y);
+    return (x - y).toFixed(3).replace(/[.,]000$/, "");
 };
 
 const divide = function (x, y) {
-    return Math.round(x / y);
+    return (x / y).toFixed(3).replace(/[.,]000$/, "");
 }
 
 // const sum = function (array) {
@@ -20,7 +20,7 @@ const divide = function (x, y) {
 // };
 
 const multiply = function (x, y) {
-    return Math.round(x * y);
+    return (x * y).toFixed(3).replace(/[.,]000$/, "");
 };
 
 // const power = function (x, y) {
