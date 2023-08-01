@@ -90,7 +90,11 @@ document.querySelector('#Backspace').addEventListener('click', () => {
     if (displayValue.split('').pop() === '.') {
         document.querySelector('#Period').disabled = false;
     }
-    displayValue = displayValue.slice(0, displayValue.length - 1);
+    if (displayValue.split('').pop() === ' ') {
+        displayValue = displayValue.slice(0, displayValue.length - 3);
+    } else {
+        displayValue = displayValue.slice(0, displayValue.length - 1);
+    }
     updateDisplayValue();
 });
 
